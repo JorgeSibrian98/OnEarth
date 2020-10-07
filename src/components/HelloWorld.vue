@@ -17,7 +17,7 @@
                   <b-form-group
                     class="main-search"
                     id="lonLat-group"
-                    label="Longitud, Latitud:"
+                    label="Longitude, Latitude:"
                     label-for="input-1"
                   >
                     <b-form-input
