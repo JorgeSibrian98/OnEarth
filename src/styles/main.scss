@@ -9,8 +9,6 @@ $border-radius: 0rem;
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "node_modules/bootstrap-vue/src/index.scss";
 
-
-
 .navbar a {
   color: rgba(0, 0, 0, 0.9);
 }
@@ -40,15 +38,21 @@ $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
 @media (min-width: $breakpoint-xs) {
-
   /* date result tex */
   .date-result {
     font-size: 1rem;
   }
 
-
   .hero-form-container {
     top: 30%;
+  }
+
+  .lon-lat-tile-div {
+    position: absolute;
+    top: 0%;
+  }
+  .lon-lat-tile-div > label {
+    align-self: center;
   }
 }
 
@@ -56,10 +60,14 @@ $breakpoint-xl: 1200px;
   .hero-form-container {
     top: 30%;
   }
+
+  .div-results {
+    max-width: 80vw;
+    margin: auto;
+  }
 }
 
 @media (min-width: $breakpoint-md) {
-
   /* date result tex */
   .date-result {
     font-size: 0.9rem;
@@ -69,17 +77,24 @@ $breakpoint-xl: 1200px;
   .hero-form-container {
     top: 28%;
   }
+
+  .div-results {
+    max-width: 60vw;
+    margin: auto;
+  }
 }
 
 @media (min-width: $breakpoint-lg) {
-
   /* date result tex */
   .date-result {
     font-size: 1rem;
   }
 
-
   .hero-form-container {
     top: 35%;
+  }
+  .div-results {
+    max-width: 40vw;
+    margin: auto;
   }
 }

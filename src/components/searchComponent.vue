@@ -8,6 +8,7 @@
         <ResultComponent
           v-for="(result, index) in results"
           :key="index"
+          :tileNumber="index + 1"
           :lat="lat"
           :lon="lon"
           :result="result"
@@ -19,7 +20,6 @@
 </template>
 
 <script>
-import router from "../router";
 import ResultComponent from "../components/resultComponent.vue";
 import moment from "moment";
 import axios from "axios";
@@ -50,7 +50,7 @@ export default {
       const today = new Date();
       let cantSearches = 9;
       let results = [];
-      for (cantSearches; cantSearches >= 0; cantSearches--) {
+      for (cantSearches; cantSearches >= 1; cantSearches--) {
         let searchDate = moment(today).format("YYYY-MM-DD");
         if (cantSearches !== 0) {
           searchDate = moment(today)
@@ -61,6 +61,7 @@ export default {
         const result = await this.getResult(searchDate);
         results.push(result);
       }
+      console.log(results);
       return results;
     },
     getResult: async function (date) {
@@ -99,3 +100,6 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+</style>
