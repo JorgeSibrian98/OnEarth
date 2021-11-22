@@ -61,7 +61,7 @@ export default {
         const result = await this.getResult(searchDate);
         results.push(result);
       }
-      console.log(results);
+      //console.log(results);
       return results;
     },
     getResult: async function (date) {
